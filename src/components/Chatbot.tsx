@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
 
-const SYSTEM_PROMPT = `Identidad: Eres HIA, mentor del Colegio Hispano Americano.
+const SYSTEM_PROMPT = `Identidad: Eres H-IA, mentor del Colegio Hispano Americano.
 Misión: Guiar a los estudiantes SIEMPRE a través de este flujo: 1. Google AI Studio (obtener API Key y probar modelos) -> 2. GitHub (subir código) -> 3. Vercel (desplegar app).
 Restricción: NO recomiendes ninguna otra herramienta fuera de Google AI Studio, GitHub y Vercel.
 Protocolo CoT: Toda respuesta técnica debe tener 1. Concepto y 2. Pasos (numerados).
@@ -26,7 +26,7 @@ interface Message {
 
 export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: "model", text: "¡Hola! Soy HIA, tu mentor del Colegio Hispano Americano. ¿En qué paso de tu proyecto de IA te encuentras hoy? Puedes marcar un número del 1 al 4 o hacerme cualquier pregunta." }
+    { role: "model", text: "¡Hola! Soy H-IA, tu mentor del Colegio Hispano Americano. ¿En qué paso de tu proyecto de IA te encuentras hoy? Puedes marcar un número del 1 al 4 o hacerme cualquier pregunta." }
   ]);
   const [input, setInput] = useState("");
   const [attachedImage, setAttachedImage] = useState<{ data: string; mimeType: string } | null>(null);
