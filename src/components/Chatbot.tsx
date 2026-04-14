@@ -4,7 +4,7 @@ import { Send, User, Bot, Loader2, X, Paperclip } from "lucide-react";
 import Markdown from "react-markdown";
 import { motion, AnimatePresence } from "motion/react";
 
-const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const genAI = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "" });
 
 const SYSTEM_PROMPT = `Identidad: Eres HIA, mentor del Colegio Hispano Americano.
 Protocolo CoT: Toda respuesta técnica debe tener 1. Concepto, 2. Pasos (numerados), 3. Alerta de Seguridad (sobre la API Key).
